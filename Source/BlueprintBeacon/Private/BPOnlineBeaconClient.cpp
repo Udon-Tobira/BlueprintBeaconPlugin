@@ -6,6 +6,10 @@
 
 void ABPOnlineBeaconClient::ConnectTo(
     const FString& ConnectInfo, EBPOnlineBeaconClientConnectToResult& Result) {
+	// log
+	UE_LOG(LogBPOnlineBeaconClient, Log, TEXT("trying to connect to: %s"),
+	       *ConnectInfo);
+
 	// create URL
 	FURL ConnectURL(nullptr, *ConnectInfo, TRAVEL_Absolute);
 
@@ -27,6 +31,11 @@ void ABPOnlineBeaconClient::ConnectTo(
 
 	// set as success
 	Result = EBPOnlineBeaconClientConnectToResult::Success;
+
+	// log
+	UE_LOG(LogBPOnlineBeaconClient, Log,
+	       TEXT("Online beacon client successfully connected to online beacon "
+	            "host."));
 
 	// start receiving request
 	PauseBeaconRequests(false);
