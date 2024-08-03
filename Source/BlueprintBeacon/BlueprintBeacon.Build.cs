@@ -26,7 +26,8 @@ public class BlueprintBeacon : ModuleRules
             new string[]
             {
                 "Core",
-                "OnlineSubsystemUtils"
+                "OnlineSubsystemUtils",
+                "BlueprintBeaconClient",
 				// ... add other public dependencies that you statically link with here ...
 			}
             );

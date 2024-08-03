@@ -25,6 +25,10 @@
 		{
 			"Name": "OnlineSubsystemUtils",
 			"Enabled": true
+		},
+		{
+			"Name": "BlueprintBeaconClient",
+			"Enabled":  true
 		}
 	]
 }
